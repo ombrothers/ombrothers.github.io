@@ -1,0 +1,273 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+html{
+  background-color: rgb(212, 212, 212);
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top:85px;
+  padding:0;
+  /*your style rules go in here */
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgb(116, 21, 21);
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /*   justify-content: flex-start; */
+}
+
+nav ul li {
+  flex: 0 0 8rem; /*the same as flex-grow, flex-shrink, flex-basis */
+  text-align: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 0.8rem 1rem;
+  display: block;
+  color:white;
+}
+
+nav ul li:hover {
+  background-color: rgb(116, 21, 21);
+}
+
+nav ul li a:hover {
+  color: white;
+}
+
+/* sub menus */
+
+li ul {
+  display: none;
+  position: absolute;
+  background-color: rgb(116, 21, 21);
+}
+
+li ul li a {
+  padding: 0.3rem 1.5rem;
+  /*   font-size: 0.8rem; */
+}
+
+nav ul li:hover ul {
+  display: flex;
+  flex-direction: column;
+}
+
+nav ul li ul li {
+  flex: 0 1 auto;
+  width: 8rem; /* the same as the value for flex-basis on the parent li */
+}
+
+/* now for the smaller displays */
+
+@media screen and (max-width: 700px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block;
+    float: right;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:checked ~ ul {
+    display: block;
+  }
+
+  li ul {
+    position: static;
+  }
+
+  nav ul li {
+    flex: 0 0 auto; /*the same as flex-grow, flex-shrink, flex-basis */
+    width: 100%;
+  }
+
+  nav ul li:hover ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+section {
+  border: 0;
+}
+.dramatis, .play{
+  margin:1em auto;
+}
+
+
+section.dramatis {
+  border: 2px solid black;
+  padding:10px;
+  max-width: 800px;
+  margin-bottom: 1em;
+  background-color: white;
+}
+section.play {
+  margin:auto;
+  width: 85%;
+  max-width: 800px;
+  background-color: white;
+  border: solid black;
+  padding: 25px;
+  
+}
+
+
+div.sceneImage {
+}
+h1.act {
+  background-color: rgb(116, 21, 21);
+  padding:6px;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+  
+}
+p.character {
+font-weight: 700;
+margin-left: 10px;
+}
+p.characterlong{
+  font-weight: 700;
+  margin-left: 10px;
+}
+p.charactername {
+font-weight: 700;
+}
+h1.dramatishead {
+}
+h2.firstscene {
+  text-align: center;
+ text-decoration: underline;
+}
+h2.location {
+  text-align: center;
+  font-size: medium;
+  font-style: oblique;
+}
+p.play_location {
+}
+p.prose {
+  margin-top: 10px;
+  margin-left: 65px;
+}
+
+h2.scene {
+  text-align: center;
+  text-decoration: underline;
+  
+}
+p.song {
+  text-align: center;
+}
+p.exunt{
+  text-align: right;
+  font-weight: 700;
+  margin-right: 10px;
+ 
+}
+h2.stagedirection {
+  font-size: medium;
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+p.verseline {
+  margin: 10px 0 0.4em 4em;
+}
+span.character_role {
+}
+span.stage_directions_inline {
+}
+
+span.character_beforespeech {
+}
+figure.dramatis_image{
+  width:50%;
+  max-width: 400px;
+  float: left;
+}
+img.angry_shylock{
+ display:block;
+ width: 100%;
+ height: auto;
+}
+
+@media screen and (max-width: 800px){
+  html{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:700px){
+  .play, .dramatis{
+    width:100%;
+    padding: 1em 3em;
+  }
+  figure.dramatis_image{
+    width:100%;
+    max-width: 600px;
+    float: none;
+  }
+
+}
+img{
+  width:100%;
+}
+figure .act1_image{
+  margin: auto;
+  max-width: 500px;
+}
+img.portia{
+  margin: auto;
+}
+figure .act2_image{
+  max-width: 500px;
+}
+li.home{
+  color: white;
+}
+header{
+  text-align: center;
+}
+.backtotop{
+  position:fixed;
+  bottom: 6px;
+  right: 15px;
+  opacity: 0.9;
+  background-color: rgb(172, 172, 172);
+  padding: 4px 4px 4px 4px;
+}
